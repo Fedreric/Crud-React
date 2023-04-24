@@ -31,9 +31,15 @@ function App() {
   }
   return (
     <div className="container">
+      <h1>Lista de tareas</h1>
+      <hr />
       <TareaAgregar agregandoTarea={agregandoTarea}/>
       <TareaList tareas = {tareas} onCompletado = {onCompletado} onBorrarItem = {onBorrarItem} onEditarItem = {onEditarItem}/>
+      <footer>
+        <p>&copy; Ledesma Federico Luciano</p>
+      </footer>
     </div>
+    
   );
 }
 
