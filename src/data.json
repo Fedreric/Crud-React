@@ -1,0 +1,19 @@
+[
+    {
+        "id":1,
+        "tarea": "Ir de compras",
+        "completado": false
+    },{
+        "id":2,
+        "tarea": "Cocinar",
+        "completado": false
+    },{
+        "id":3,
+        "tarea": "Comer",
+        "completado": true
+    },{
+        "id":4,
+        "tarea": "Estudiar",
+        "completado": false
+    }
+]
