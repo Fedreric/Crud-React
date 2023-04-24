@@ -3,19 +3,16 @@
 
 
 ## Descripción del Proyecto 📃
-<hr>
 
 *Lista de tareas realizada para el poyecto TI - Yerba Buena, realizado con react*
 
 ## Tecnologías utilizadas
-<hr>
 
 - JavaScript
 - HTML
 - CSS
 - React
 ## Estado del sistema 🏥
-<hr>
 
 - Agregar tarea ✅
 - Editar tarea ✅
@@ -23,7 +20,6 @@
 - Seleccionar tarea como realizada ✅
 
 ## Uso de la aplicación ⌨
-<hr>
 
 - Selecciona el input para agregar tarea.
 - Escribe la tarea deseada y preciona agregar.
