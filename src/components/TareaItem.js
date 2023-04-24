@@ -16,7 +16,7 @@ export default function TareaItem({tarea, onCompletado,onBorrarItem,onEditarItem
         onChange={ () => onCompletado(tarea.id)}/>
         { tarea.tarea}
         <button className='btn-eliminar' onClick = {() => onBorrarItem(tarea.id)}>X</button>
-        <button className='btn-eliminar' onClick = {() => onEditarItem(tarea.id)}>E</button>
+        <button className='btn-editar' onClick = {() => onEditarItem(tarea.id)}>E</button>
     </div>
   )
 }

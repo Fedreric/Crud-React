@@ -1,13 +1,38 @@
+body{
+  background-color: #32746a;
+}
 .container{
   margin: auto;
+  margin-top: 20px;
   width: 50%;
-  border: 1px solid #73ad21;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
   background-color: #32746a;
   padding: 10px;
 }
-
 .btn-eliminar{
   float:right;
   background-color: red;
   color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-editar{
+  float:right;
+  background-color: orange;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-agregar{
+  background-color: blue;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .container{
+    width: 90%;
+  }
 }
