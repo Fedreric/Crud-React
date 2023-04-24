@@ -11,7 +11,7 @@ export default function TareaItem({tarea, onCompletado,onBorrarItem,onEditarItem
 
     }
   return (
-    <div style={getStyle()}>
+    <div style={getStyle()} className='input-border'>
         <input type='checkbox' checked = {tarea.completado}
         onChange={ () => onCompletado(tarea.id)}/>
         { tarea.tarea}

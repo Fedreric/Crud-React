@@ -1,6 +1,11 @@
 body{
   background-color: #32746a;
 }
+h1,footer{
+  text-align: center;
+  color: #212529;
+}
+
 .container{
   margin: auto;
   margin-top: 20px;
@@ -10,25 +15,29 @@ body{
   background-color: #32746a;
   padding: 10px;
 }
+.input-border{
+  border-radius: 5px;
+}
 .btn-eliminar{
   float:right;
-  background-color: red;
-  color: #fff;
+  background-color: #dc3545;
+  color: #212529;
   border-radius: 5px;
   cursor: pointer;
 }
 .btn-editar{
   float:right;
-  background-color: orange;
-  color: #fff;
+  background-color: #ffc107;
+  color: #212529;
   border-radius: 5px;
   cursor: pointer;
 }
 .btn-agregar{
-  background-color: blue;
-  color: #fff;
+  background-color:  #007bff ;
+  color: #212529;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 767px) {

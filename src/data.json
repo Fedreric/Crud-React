@@ -10,7 +10,7 @@
     },{
         "id":2,
         "tarea": "Comer",
-        "completado": true
+        "completado": false
     },{
         "id":3,
         "tarea": "Estudiar",

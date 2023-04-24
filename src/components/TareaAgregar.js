@@ -17,7 +17,7 @@ export default function TareaAgregar({agregandoTarea}) {
   return (
     <div style = {{margin:20}}>
         <form onSubmit = {agregarTarea}>
-            <input type='text' value ={valorIngresado} onChange = {cambiarValor} placeholder='ingresa una tarea'/>
+            <input type='text' value ={valorIngresado} onChange = {cambiarValor} placeholder='ingresa una tarea' className='input-border'/>
             <button className='btn-agregar'>Agregar</button>
         </form>
     </div>
