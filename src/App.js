@@ -14,7 +14,7 @@ function App() {
   }
 
   const onBorrarItem = (id) => {
-    console.log('Borrar ' + id);
+    setTareas([...tareas].filter(tarea => tarea.id !== id));
   }
 
   return (
