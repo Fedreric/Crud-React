@@ -1,38 +1,47 @@
-.App {
+body{
+  background-color: #32746a;
+}
+h1,footer{
   text-align: center;
+  color: #212529;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  background-color: #32746a;
+  padding: 10px;
+}
+.input-border{
+  border-radius: 5px;
+}
+.btn-eliminar{
+  float:right;
+  background-color: #dc3545;
+  color: #212529;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-editar{
+  float:right;
+  background-color: #ffc107;
+  color: #212529;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-agregar{
+  background-color:  #007bff ;
+  color: #212529;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 767px) {
+  .container{
+    width: 90%;
   }
 }

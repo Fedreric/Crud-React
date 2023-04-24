@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import data from './data.json';
 import './App.css';
+import TareaList from './components/TareaList';
+import TareaAgregar from './components/TareaAgregar';
 
 function App() {
+
+  const [tareas , setTareas] =  useState(data);
+
+  const onCompletado = (id) => {
+    setTareas(tareas.map((tarea) => {
+      return tarea.id === Number(id) ? {...tarea, completado: !tarea.completado} : {...tarea};
+    }));
+  }
+
+  const onBorrarItem = (id) => {
+    setTareas([...tareas].filter(tarea => tarea.id !== id));
+  }
+
+  const agregandoTarea = (newTarea) =>{
+    let nuevaTarea = {id : +new Date(),tarea: newTarea, completado:false};
+    setTareas([...tareas, nuevaTarea]);
+  }
+
+  const onEditarItem = (id) =>{
+    let tareaEdit = tareas.find(tarea => tarea.id === id);
+    let newTarea = prompt("Editar tarea: ");
+    tareaEdit.tarea = newTarea;
+    setTareas([...tareas]);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Lista de tareas</h1>
+      <hr />
+      <TareaAgregar agregandoTarea={agregandoTarea}/>
+      <TareaList tareas = {tareas} onCompletado = {onCompletado} onBorrarItem = {onBorrarItem} onEditarItem = {onEditarItem}/>
+      <footer>
+        <p>&copy; Ledesma Federico Luciano</p>
+      </footer>
     </div>
+    
   );
 }
 
