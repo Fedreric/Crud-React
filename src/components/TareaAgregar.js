@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export default function TareaAgregar({agregandoTarea}) {
-    const [valorIngresado, setValorIngresado] = useState('hola');
+    const [valorIngresado, setValorIngresado] = useState('');
 
     const cambiarValor = (e) =>{
         setValorIngresado(e.currentTarget.value);

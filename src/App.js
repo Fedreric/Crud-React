@@ -18,8 +18,9 @@ function App() {
     setTareas([...tareas].filter(tarea => tarea.id !== id));
   }
 
-  const agregandoTarea = (nuevaTarea) =>{
-    console.log('nueva tarea: ' + nuevaTarea)
+  const agregandoTarea = (newTarea) =>{
+    let nuevaTarea = {id : +new Date(),tarea: newTarea, completado:false};
+    setTareas([...tareas, nuevaTarea]);
   }
   return (
     <div className="container">
