@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TareaItem({tarea, onCompletado}) {
+export default function TareaItem({tarea, onCompletado,onBorrarItem}) {
     const getStyle = () =>{
         return {
             textDecoration:tarea.completado? 'line-through' : 'none',
@@ -14,9 +14,8 @@ export default function TareaItem({tarea, onCompletado}) {
     <div style={getStyle()}>
         <input type='checkbox' checked = {tarea.completado}
         onChange={ () => onCompletado(tarea.id)}/>
-
         { tarea.tarea}
-        <button className='btn-eliminar'>X</button>
+        <button className='btn-eliminar' onClick = {() => onBorrarItem(tarea.id)}>X</button>
     </div>
   )
 }
