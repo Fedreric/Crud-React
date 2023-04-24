@@ -22,10 +22,17 @@ function App() {
     let nuevaTarea = {id : +new Date(),tarea: newTarea, completado:false};
     setTareas([...tareas, nuevaTarea]);
   }
+
+  const onEditarItem = (id) =>{
+    let tareaEdit = tareas.find(tarea => tarea.id === id);
+    let newTarea = prompt("Editar tarea: ");
+    tareaEdit.tarea = newTarea;
+    setTareas([...tareas]);
+  }
   return (
     <div className="container">
       <TareaAgregar agregandoTarea={agregandoTarea}/>
-      <TareaList tareas = {tareas} onCompletado = {onCompletado} onBorrarItem = {onBorrarItem}/>
+      <TareaList tareas = {tareas} onCompletado = {onCompletado} onBorrarItem = {onBorrarItem} onEditarItem = {onEditarItem}/>
     </div>
   );
 }

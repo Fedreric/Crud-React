@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TareaItem({tarea, onCompletado,onBorrarItem}) {
+export default function TareaItem({tarea, onCompletado,onBorrarItem,onEditarItem}) {
     const getStyle = () =>{
         return {
             textDecoration:tarea.completado? 'line-through' : 'none',
@@ -16,6 +16,7 @@ export default function TareaItem({tarea, onCompletado,onBorrarItem}) {
         onChange={ () => onCompletado(tarea.id)}/>
         { tarea.tarea}
         <button className='btn-eliminar' onClick = {() => onBorrarItem(tarea.id)}>X</button>
+        <button className='btn-eliminar' onClick = {() => onEditarItem(tarea.id)}>E</button>
     </div>
   )
 }
