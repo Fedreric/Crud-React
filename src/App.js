@@ -2,6 +2,7 @@ import { useState } from 'react';
 import data from './data.json';
 import './App.css';
 import TareaList from './components/TareaList';
+import TareaAgregar from './components/TareaAgregar';
 
 function App() {
 
@@ -17,8 +18,12 @@ function App() {
     setTareas([...tareas].filter(tarea => tarea.id !== id));
   }
 
+  const agregandoTarea = (nuevaTarea) =>{
+    console.log('nueva tarea: ' + nuevaTarea)
+  }
   return (
     <div className="container">
+      <TareaAgregar agregandoTarea={agregandoTarea}/>
       <TareaList tareas = {tareas} onCompletado = {onCompletado} onBorrarItem = {onBorrarItem}/>
     </div>
   );
